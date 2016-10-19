@@ -1,14 +1,11 @@
 module.exports = {
   js: {
-    xdomain: require('!!file-loader?name=static/js/[name].[ext]!../../../vendor/ie-fix/xdomain.all.js'),
-    html5shiv: require('!!file-loader?name=static/js/[name].[ext]!../../../vendor/ie-fix/html5shiv.min.js'),
-    respond: require('!!file-loader?name=static/js/[name].[ext]!../../../vendor/ie-fix/respond.min.js'),
-  },
-  images: {
-    'login-bg': require('!!file-loader?name=static/images/[name].[ext]!../imgs/login-bg.jpg'),
+    xdomain: require('!!file-loader?name=static/js/[name].[ext]!vendorDir/ie-fix/xdomain.all.js'),
+    html5shiv: require('!!file-loader?name=static/js/[name].[ext]!vendorDir/ie-fix/html5shiv.min.js'),
+    respond: require('!!file-loader?name=static/js/[name].[ext]!vendorDir/ie-fix/respond.min.js'),
   },
   dll: {
-    js: require('!!file-loader?name=dll/dll.js!../../dll/dll.js'),
-    css: require('!file-loader?name=dll/dll.css!../../dll/dll.css'),
+    js: require('!!file-loader?name=dll/dll.js!dllDir/dll.js'),
+    css: require('!file-loader?name=dll/dll.css!dllDir/dll.css'),
   },
 };

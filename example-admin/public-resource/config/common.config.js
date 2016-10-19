@@ -1,11 +1,11 @@
-const buildFileConfig = require('configDir/build-file.config');
-const moduleExports = {
+const coreConfig = require('coreConfigDir/common.config');
+const moduleExports = Object.assign(coreConfig, {
   DIRS: {
-    BUILD_FILE: buildFileConfig,
+    BUILD_FILE: require('configDir/build-file.config'),
   },
 
   PAGE_ROOT_PATH: '../../../build/',
-};
+});
 
 /* 帮助确定ie下CORS的代理文件 */
 moduleExports.DIRS.SERVER_API_URL = moduleExports.SERVER_API_URL;

@@ -4,8 +4,12 @@ module.exports = {
   // 模块别名的配置，为了使用方便，一般来说所有模块都是要配置一下别名的
   alias: {
     /* 各种目录 */
+    vendorDir: dirVars.vendorDir,
     iconfontDir: path.resolve(dirVars.publicDir, 'iconfont/'),
     configDir: dirVars.configDir,
+    coreConfigDir: dirVars.coreConfigDir,
+    dllDir: dirVars.dllDir,
+    lessDir: path.resolve(dirVars.coreDir, 'less'),
 
     /* vendor */
     /* bootstrap 相关 */
@@ -16,9 +20,6 @@ module.exports = {
     routerModule: path.resolve(dirVars.libsDir, 'router.module'),
 
     libs: path.resolve(dirVars.libsDir, 'libs.module'),
-
-    /* less */
-    lessDir: path.resolve(dirVars.publicDir, 'less'),
 
     /* components */
 
@@ -32,7 +33,7 @@ module.exports = {
 
     /* config */
     configModule: path.resolve(dirVars.configDir, 'common.config'),
-    bootstrapConfig: path.resolve(dirVars.configDir, 'bootstrap.config'),
+    bootstrapConfig: path.resolve(dirVars.coreConfigDir, 'bootstrap.config'),
   },
 
   // 当require的模块找不到时，尝试添加这些后缀后进行寻找
