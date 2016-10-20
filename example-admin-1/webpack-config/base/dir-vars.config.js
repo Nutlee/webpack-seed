@@ -2,7 +2,7 @@ var path = require('path');
 var mE = {};
 
 // 源文件目录
-mE.staticRootDir = path.resolve(__dirname, '../../'); // 根目录
+mE.staticRootDir = path.resolve(__dirname, '../../../'); // 根目录
 
 /**/mE.vendorDir = path.resolve(mE.staticRootDir, './vendor'); // 存放所有不能用npm管理的第三方库
 
