@@ -21,3 +21,7 @@ build
 
 *.sublime-project
 *.sublime-workspace
+
+.DS_Store
+
+npm-debug.log

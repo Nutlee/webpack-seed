@@ -3,18 +3,18 @@
   "version": "1.2.2",
   "description": "This is a seed for web application built by webpack",
   "scripts": {
-    "build": "node npm-scripts/before-build.script.js && webpack --progress --colors --bail",
-    "dev": "node npm-scripts/before-build.script.js && webpack --progress --colors --config ./webpack.dev.config.js",
-    "watch": "node npm-scripts/before-build.script.js && webpack --progress --colors --watch --config ./webpack.dev.config.js",
-    "start": "webpack-dev-server --inline --progress --compress --devtool eval --content-base build/",
+    "build": "node npm-scripts/before-build.script.js && webpack --progress --colors --bail --config ./webpack.product.config.js",
+    "dev": "node npm-scripts/before-build.script.js && webpack --progress --colors",
+    "watch": "node npm-scripts/before-build.script.js && webpack --progress --colors --watch",
+    "start": "webpack-dev-server --inline --hot --progress --compress --devtool eval --content-base build/ --host 0.0.0.0 ",
     "profile": "node npm-scripts/before-build.script.js && webpack --colors --profile --display-modules",
     "dll": "node npm-scripts/before-build-dll.script.js && webpack --progress --colors --config ./webpack-dll.config.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Array-Huang/webpack-seed.git"
+    "url": "git@github.com:Nutlee/webpack-seed.git"
   },
-  "author": "Array Huang",
+  "author": "Nutlee",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.4.0",
@@ -46,11 +46,14 @@
     "precss": "^1.4.0",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7"
+    "url-loader": "^0.5.7",
+    "nodemon": "^1.11.0",
+    "webpack": "^1.13.2"
   },
   "dependencies": {
     "babel-runtime": "^6.11.6",
     "bootstrap": "^3.3",
-    "jquery": "^1.12.4"
+    "express": "^4.14.0",
+    "jquery": "^1.12.4",
   }
 }
