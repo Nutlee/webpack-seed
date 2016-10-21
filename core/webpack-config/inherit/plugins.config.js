@@ -1,6 +1,5 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var path = require('path');
 var dirVars = require('../base/dir-vars.config.js');
 
 var configPlugins = [
@@ -13,8 +12,8 @@ var configPlugins = [
   }),
   /* 抽取出所有通用的部分 */
   new webpack.optimize.CommonsChunkPlugin({
-    name: 'commons',      // 需要注意的是，chunk的name不能相同！！！
-    filename: '[name].bundle.js',
+    name: 'commons/commons',      // 需要注意的是，chunk的name不能相同！！！
+    filename: '[name]/bundle.js',
     minChunks: 4,
   }),
   /* 抽取出chunk的css */

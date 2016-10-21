@@ -8,7 +8,7 @@ pageArr.forEach((page) => {
   const htmlPlugin = new HtmlWebpackPlugin({
     filename: `${page}/page.html`,
     template: path.resolve(dirVars.pagesDir, `./${page}/html.js`),
-    chunks: [page, 'commons'],
+    chunks: [page, 'commons/commons'],
     hash: true, // 为静态资源生成hash值
     xhtml: true,
   });

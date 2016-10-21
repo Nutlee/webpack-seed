@@ -4,7 +4,7 @@ const moduleExports = Object.assign(coreConfig, {
     BUILD_FILE: require('configDir/build-file.config'),
   },
 
-  PAGE_ROOT_PATH: '../../../build/',
+  PAGE_ROOT_PATH: '../../',
 });
 
 /* 帮助确定ie下CORS的代理文件 */
