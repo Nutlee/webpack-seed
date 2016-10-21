@@ -8,6 +8,7 @@ module.exports = {
     coreConfigDir: dirVars.coreConfigDir,
     dllDir: dirVars.dllDir,
     lessDir: path.resolve(dirVars.coreDir, 'less'),
+    iconfontDir: path.resolve(dirVars.coreDir, 'iconfont'),
 
     /* vendor */
     /* bootstrap 相关 */

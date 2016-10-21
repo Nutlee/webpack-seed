@@ -16,7 +16,7 @@ module.exports = {
     },
     {
       test: /\.css$/,
-      exclude: /node_modules|bootstrap/,
+      include: includeDirs,
       loader: ExtractTextPlugin.extract('css?minimize&-autoprefixer!postcss'),
     },
     {
