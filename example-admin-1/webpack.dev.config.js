@@ -1,15 +1,9 @@
-module.exports = {
+const config = Object.assign(require('../core/_webpack.dev.config.js'), {
   entry: require('./webpack-config/entry.config.js'),
-
   output: require('./webpack-config/output.config.js'),
+});
 
-  module: require('./webpack-config/module.config.js'),
+config.resolve.alias = Object.assign(config.resolve.alias, require('./webpack-config/alias.config.js'));
+config.plugins = Object.assign(config.plugins, require('./webpack-config/plugins.config.js'));
 
-  resolve: require('./webpack-config/resolve.config.js'),
-
-  plugins: require('./webpack-config/plugins.dev.config.js'),
-
-  eslint: require('./webpack-config/vendor/eslint.config.js'),
-
-  postcss: require('./webpack-config/vendor/postcss.config.js'),
-};
+module.exports = config;

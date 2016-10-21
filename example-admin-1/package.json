@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node npm-scripts/build.script.js && webpack --progress --colors --bail",
+    "build": "node npm-scripts/build.script.js && webpack --progress --colors --bail --config ./webpack.product.config.js",
     "dev": "node npm-scripts/build.script.js && webpack --progress --colors --config ./webpack.dev.config.js",
     "watch": "node npm-scripts/build.script.js && webpack --progress --colors --watch --config ./webpack.dev.config.js",
     "start": "webpack-dev-server --inline --progress --compress --devtool eval",
