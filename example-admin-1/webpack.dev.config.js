@@ -7,5 +7,5 @@ config.resolve.alias = Object.assign(config.resolve.alias, require('./webpack-co
 config.plugins = config.plugins.concat(require('./webpack-config/plugins.config.js'));
 config.module.preLoaders = config.module.preLoaders.concat(require('./webpack-config/module/pre-loaders.config.js'));
 config.module.loaders = config.module.loaders.concat(require('./webpack-config/module/loaders.config.js'));
-console.log(config);
+
 module.exports = config;

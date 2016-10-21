@@ -2,9 +2,6 @@
   "name": "webpack-seed",
   "version": "2.0.0",
   "description": "This is a seed for web application built by webpack",
-  "scripts": {
-
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:Array-Huang/webpack-seed.git"
@@ -42,7 +39,7 @@
     "precss": "^1.4.0",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7",
+    "url-loader": "^0.5.7"
   },
   "dependencies": {
     "babel-runtime": "^6.11.6",
