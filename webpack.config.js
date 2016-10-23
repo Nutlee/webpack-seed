@@ -26,14 +26,15 @@ module.exports = {
   // 	    '/api/a': {
   // 	    	target: 'http://localhost:3000',
   // 	    	secure: false,
-  // 	    	bypass: function(req, res, proxyOptions) {
-  // 	    		console.log(res);
-  // 	    	    if (req.headers.accept.indexOf('html') !== -1) {
-  // 	    	    	console.log(req.body);
-  // 	    	        console.log('Skipping proxy for browser request.');
-  // 	    	        res.send='HelloWorld';
-  // 	    	    }
-  // 	    	},
+  // 	    	// bypass: function(req, res, proxyOptions) {
+  // 	    	// 	// console.log(res);
+  // 	    	//     if (req.headers.accept.indexOf('html') !== -1) {
+  // 	    	//     	console.log(req.body);
+  // 	    	//         console.log('Skipping proxy for browser request.');
+  // 	    	//         res.send='HelloWorld bypass';
+  // 	    	//     }
+  // 	    	//     return false;
+  // 	    	// },
   // 	    }
   // 	}
   // }

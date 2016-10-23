@@ -27,6 +27,7 @@ var configPlugins = [
     manifest: require('../../manifest.json'), // 指定manifest.json
     name: 'dll',  // 当前Dll的所有内容都会存放在这个参数指定变量名的一个全局变量下，注意与DllPlugin的name参数保持一致
   }),
+  new webpack.HotModuleReplacementPlugin(),
 ];
 
 pageArr.forEach((page) => {
