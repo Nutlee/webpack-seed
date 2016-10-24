@@ -16,24 +16,28 @@ fork 自 [Array-Huang/webpack-seed](https://github.com/Array-Huang/webpack-seed)
 ## 使用说明
 
 1. 全局安装 webpack 和 webpack-dev-server，如果已经装过那可以跳过这一步
-```bash
-$ npm install --global webpack webpack-dev-server
-```
+
+	```
+	$ npm install --global webpack webpack-dev-server
+	```
 
 2. 本项目使用包管理工具NPM，因此需要先把本项目所依赖的包下载下来：
-```
-$ npm install --no-optional
-```
+
+	```
+	$ npm install --no-optional
+	```
 
 3. 编译程序，生成的所有代码在`build`目录内。
-```
-$ npm run build # 生成生产环境的代码。用npm run watch或npm run dev可生成开发环境的代码
-```
+
+	```
+	$ npm run build # 生成生产环境的代码。用npm run watch或npm run dev可生成开发环境的代码
+	```
 
 4. 启动开发环境
-```
-$ npm run start
-```
+
+	```
+	$ npm run start
+	```
 
 5. 打开浏览器，在地址栏里输入`http://localhost:8080`，Duang！页面就出来了！
 
