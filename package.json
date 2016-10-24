@@ -6,7 +6,7 @@
     "build": "node npm-scripts/before-build.script.js && webpack --progress --colors --bail --config ./webpack.product.config.js",
     "dev": "node npm-scripts/before-build.script.js && webpack --progress --colors",
     "watch": "node npm-scripts/before-build.script.js && webpack --progress --colors --watch",
-    "start": "webpack-dev-server --inline --hot --progress --compress --devtool eval --content-base build/ --host 0.0.0.0 ",
+    "start": "node app",
     "profile": "node npm-scripts/before-build.script.js && webpack --colors --profile --display-modules",
     "dll": "node npm-scripts/before-build-dll.script.js && webpack --progress --colors --config ./webpack-dll.config.js"
   },
@@ -34,6 +34,7 @@
     "eslint-plugin-react": "^5.0.1",
     "exports-loader": "^0.6.3",
     "expose-loader": "^0.7.1",
+    "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "glob": "^7.1.1",
@@ -42,11 +43,8 @@
     "imports-loader": "^0.6.5",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
-    "nodemon": "^1.11.0",
     "postcss-loader": "^0.9.1",
     "precss": "^1.4.0",
-    "proxy-middleware": "^0.15.0",
-    "react-hot-loader": "^3.0.0-beta.6",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
@@ -56,7 +54,6 @@
   "dependencies": {
     "babel-runtime": "^6.11.6",
     "bootstrap": "^3.3",
-    "express": "^4.14.0",
     "jquery": "^1.12.4"
   }
 }

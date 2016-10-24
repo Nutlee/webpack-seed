@@ -1,4 +1,5 @@
 require('cp');
+require('./index.css');
 const config = require('configModule');
 
 $(() => {
@@ -7,5 +8,5 @@ $(() => {
     console.log('如果你看到这个Log，那么这个版本实际上是开发用的版本');
     console.log(config.API_ROOT);
   }
-  console.log('23333');
+  console.log('2');
 });

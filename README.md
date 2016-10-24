@@ -1,6 +1,8 @@
 # webpack-seed
 
-## 项目介绍
+fork 自 [Array-Huang/webpack-seed](https://github.com/Array-Huang/webpack-seed) v1.2.2
+
+## 原项目介绍
 本项目是一个利用webpack架构的**web app**脚手架，其特点如下：
 - 更适合多页应用。
 - 既可实现全后端分离，也可以生成后端渲染所需要的模板。
@@ -12,7 +14,7 @@
 - 整合[iconfont][1]作为字体图标方案，需要什么图标就自己上iconfont那打包下载下来，替换掉`src/public-resource/iconfont`内的文件。
 
 ## 使用说明
- 1. 全局安装webpack和webpack-dev-server，如果已经装过那可以跳过这一步
+ 1. 全局安装 webpack 和 webpack-dev-server，如果已经装过那可以跳过这一步
 ```bash
 $ npm install --global webpack webpack-dev-server
 ```
@@ -27,9 +29,9 @@ $ npm install --no-optional
 $ npm run build # 生成生产环境的代码。用npm run watch或npm run dev可生成开发环境的代码
 ```
 
- 4. 启动服务器，推荐直接使用webpack-dev-server
+ 4. 启动开发环境
 ```
-$ webpack-dev-server
+$ npm run start
 ```
 
  5. 打开浏览器，在地址栏里输入`http://localhost:8080`，Duang！页面就出来了！
@@ -38,9 +40,9 @@ $ webpack-dev-server
 | 命令            | 作用&效果          |
 | --------------- | ------------- |
 | npm run build   | 根据`webpack.config.js`，build出一份生产环境的代码 |
-| npm run dev     | 根据`webpack.dev.config.js`，build出一份开发环境的代码 |
+| npm run dev     |  |
 | npm run watch   | 在`npm run dev`的基础上添加`-- watch`，实时监控源文件，建议开发时使用这项 |
-| npm run start   | 开启webpack-dev-server，然后就可以在 http://localhost:8080/ 查看成品了 |
+| npm run start   | 开启webpack-dev-server，同时增加本地 mock 环境，然后就可以在 http://localhost:8080/ 查看成品了 |
 | npm run profile | 显示编译过程中每一项资源的耗时，用来调优的 |
 | npm run dll     | 生成Dll文件，每次升级第三方库时都需要重新执行一遍 |
 
@@ -92,23 +94,4 @@ $ webpack-dev-server
 
 ## 更新日志
 
-### 1.2.2 (2016-10-16)
-考虑到多个页面可能会共用html/js/css（例如**添加页面**和**修改页面**），在自动查找页面入口时，忽略以`_`开头的目录，因此，可以使用以`_`开头的目录来放置页面复用的资源。
 
-### 1.2.0 (2016-10-14)
-利用[`isaacs/node-glob`](https://github.com/isaacs/node-glob)根据约定好的文件目录结构自动查找页面入口，取代过去手动指定的做法（但如果在调试过程中希望只编译某些页面，仍然可以通过手动指定来实现）。
-
-### 1.1.0
-引入Dll的概念，将第三方库进行预打包，那么在打包我们的业务代码的时候，就不需要重复打包这些第三方库了。这尤其能提现在bootstrap上，可以省一大半的时间。
-- 如果修改了Dll所包含的第三方库，比如说升级之类的，请使用`npm run dll`重新打包Dll文件。注意：系统会在打包Dll前先清空Dll目录。
-- 如果重新打包了Dll，那么也请重新打包你的业务代码，使用`npm run build`或`npm run dev`。
-
-### 1.0.2
-- 编译文件前先清空build目录。
-- 分拆webpack配置文件，避免配置文件日益臃肿。
-- 分开生产环境和开发环境的webpack配置文件。其中，`npm run build`会调用生产环境的webpack配置文件(webpack.config.js)，而`npm run dev`和`npm run watch`会调用开发环境的配置文件。
-
-### 1.0.0
-由于本脚手架是直接从我负责的项目中提炼出来的，因此已具备投入生产环境的能力，故直接定义版本号为1.0.0
-
-  [1]: http://www.iconfont.cn/

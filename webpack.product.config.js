@@ -1,5 +1,5 @@
 module.exports = {
-  entry: require('./webpack-config/entry.config.js'),
+  entry: require('./webpack-config/entry.product.config.js'),
 
   output: require('./webpack-config/output.config.js'),
 
