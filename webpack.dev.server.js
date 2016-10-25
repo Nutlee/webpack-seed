@@ -1,13 +1,9 @@
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config.js');
-// var proxy = require('proxy-middleware');
-var url = require('url');
+var configURL = require('./webpack-config/base/url.config.js');
 
 module.exports = function(app) {
-  // 使用8081端口
-  // app.use('/build', proxy(url.parse('http://localhost:8080/build')));
-
   var server = new WebpackDevServer(webpack(config), {
     contentBase: 'build/',
     historyApiFallback: false,
@@ -15,15 +11,15 @@ module.exports = function(app) {
     hot: true,
     quiet: false,
     noInfo: false,
-    publicPath: 'http://192.168.2.66:8080/',
+    publicPath: configURL.webpackDevServer.url,
     proxy: {
         '*': {
-         target: 'http://localhost:3000',
+         target: configURL.mockServer.url,
          secure: false,
         }
     },
     stats: { colors: true }
-  }).listen(8080, '0.0.0.0', function() {
+  }).listen(configURL.webpackDevServer.port, '0.0.0.0', function() {
     console.log('socketio listen 8080');
   });
 }

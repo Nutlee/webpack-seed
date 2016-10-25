@@ -32,6 +32,11 @@ module.exports = {
       'window.$': 'jquery',
     }),
     new ExtractTextPlugin('[name].css'), // 打包css/less的时候会用到ExtractTextPlugin
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+    }),
   ],
   module: require('./webpack-config/module.config.js'), // 沿用业务代码的module配置
   resolve: require('./webpack-config/resolve.config.js'), // 沿用业务代码的resolve配置
