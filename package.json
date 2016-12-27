@@ -6,7 +6,7 @@
     "build": "node npm-scripts/before-build.script.js && webpack --progress --colors --bail --config ./webpack.product.config.js",
     "dev": "node npm-scripts/before-build.script.js && webpack --progress --colors",
     "watch": "node npm-scripts/before-build.script.js && webpack --progress --colors --watch",
-    "start": "cross-env NODE_ENV=dev supervisor -i build,node_modules app",
+    "start": "cross-env NODE_ENV=dev supervisor -i src,build,node_modules app",
     "profile": "node npm-scripts/before-build.script.js && webpack --colors --profile --display-modules",
     "dll": "node npm-scripts/before-build-dll.script.js && webpack --progress --colors --config ./webpack-dll.config.js"
   },

@@ -4,6 +4,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 var dirVars = require('../base/dir-vars.config.js');
 var pageArr = require('../base/page-entries.config.js');
+var openBrowserWebpackPlugin = require('open-browser-webpack-plugin');
+var url = require('../base/url.config.js');
 
 var configPlugins = [
   /* 全局shimming */
@@ -28,6 +30,7 @@ var configPlugins = [
     name: 'dll',  // 当前Dll的所有内容都会存放在这个参数指定变量名的一个全局变量下，注意与DllPlugin的name参数保持一致
   }),
   new webpack.HotModuleReplacementPlugin(),
+  new openBrowserWebpackPlugin({url: url.index})
 ];
 
 pageArr.forEach((page) => {

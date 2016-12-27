@@ -15,7 +15,7 @@ fork 自 [Array-Huang/webpack-seed](https://github.com/Array-Huang/webpack-seed)
 
 * 分离 url 配置
 
-* 修复原作者 dll.js 未压缩的问题
+* 将原作者 dll.js 默认压缩
 
 尚存问题
 
